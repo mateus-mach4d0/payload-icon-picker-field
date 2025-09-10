@@ -69,6 +69,7 @@ export const IconPickerInput: React.FC<IconPickerInputProps> = (props) => {
     }
   }, [debouncedSearch, icons])
 
+  // hello
   return (
     <div
       className={[
