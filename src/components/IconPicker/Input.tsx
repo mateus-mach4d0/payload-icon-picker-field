@@ -69,7 +69,6 @@ export const IconPickerInput: React.FC<IconPickerInputProps> = (props) => {
     }
   }, [debouncedSearch, icons])
 
-  // hello
   return (
     <div
       className={[
@@ -135,18 +134,18 @@ export const IconPickerInput: React.FC<IconPickerInputProps> = (props) => {
                 }`}
             >
               <div className={`${baseClass}__icon-picker-modal__pagination-meta-container`}>
-                <span>
+              <span>
                   Showing
                   {' '}
-                  {Object.keys(filteredIcons as Record<string, string>).length > 140
-                    ? 140
+                  {Object.keys(filteredIcons as Record<string, string>).length > 1000
+                    ? 1000
                     : Object.keys(filteredIcons as Record<string, string>).length}{' '}
                   icons of {Object.keys(icons as Record<string, string>).length}
                 </span>
               </div>
               <div className={`${baseClass}__icon-picker-modal__icon-container`}>
                 {typeof filteredIcons === 'object' && Object.keys(filteredIcons as Record<string, string>)
-                  .slice(0, 140)
+                  .slice(0, 1000)
                   .map((icon, index) => (
                     <div
                       onClick={() => {
